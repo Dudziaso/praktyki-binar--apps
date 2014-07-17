@@ -1,0 +1,11 @@
+<h1>Lista autorow</h1>
+<ul>
+	<% @autors.each do |autor| %>
+		<li>
+			<%= autor.nickname %>
+			<%=autor.id%>
+			<%=link_to "Usuń",  autor_path(autor.id), method: :delete %>
+			<%=link_to "Edytuj", "/autors/#{autor.id}/edit"%>
+		</li>
+	<%end%>
+</ul>

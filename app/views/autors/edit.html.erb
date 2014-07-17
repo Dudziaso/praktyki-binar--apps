@@ -1,0 +1,6 @@
+<h1>Edytuj autora</h1>
+<%= form_for(@autor) do |f| %>
+<%= f.label :nickname %>
+<%= f.text_field :nickname %>
+<%= f.submit "Edytuj!" %>
+<% end %>
