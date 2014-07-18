@@ -19,9 +19,6 @@ class AutorsController < ApplicationController
 		end
 	end 
 		
-	private def autor_params
-		params.require(:autor).permit(:nickname)
-	end
 
 	def destroy
 		@autor=Autor.find(params[:id])
@@ -42,4 +39,8 @@ class AutorsController < ApplicationController
 		end
 	end
 
+	private 
+	def autor_params
+		params.require(:autor).permit(:nickname)
+	end
 end
